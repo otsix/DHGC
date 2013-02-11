@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DHGC - Visor Xeografico Galicia Costa (Augas de Galicia)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    
+<!--    <link rel="stylesheet" href="../OpenLayers/api/jquery-style/jquery-ui.css" type="text/css" media="all" />-->
+<!--    <link rel="stylesheet" type="text/css" href="../OpenLayers/api/jquery-style/style.css"/>-->
+<!--    <script src="lib/ol/OpenLayers.js" type="text/javascript"></script>-->
+    <script src="lib/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<!--    <script src="lib/jquery/jquery.tmpl.js" type="text/javascript"></script>-->
+<!--    <script src="lib/jquery/jquery-ui.min.js" type="text/javascript"></script> -->
+	
+	<!-- Load WMS layer sources -->
+	<script src="config/resources.js" type="text/javascript"></script>
+	
+	<!-- PanelLayerControl-->
+	<script src="tools/toc_elle/PanelLayerControl.js" type="text/javascript"></script>
+	
+<!------------------------->
+<!-- Xeovisor Minimo XVM -->
+    <link rel="stylesheet" href="js/xvm/lib/ol/theme/default/style.css" type="text/css">
+    <link rel="stylesheet" href="js/xvm/styles/style_map.css" type="text/css">
+  	<link rel="stylesheet" href="js/xvm/styles/custom-theme/jquery-ui-1.8.21.custom.css" type="text/css">
+
+   	<script src="js/xvm/lib/ol/OpenLayers.js"></script>
+   	<script src="js/xvm/lib/jquery.datatables.min.js"></script>
+   	<script src="js/xvm/lib/jquery.i18n.properties-min.js"></script>
+   	<script src="js/xvm/lib/jquery-ui-1.8.20.custom.min.js"></script>
+    
+
+    <script src="js/xvm/tools/LIC_LayerSwitcher.js"></script>
+    <script src="js/xvm/layers.js"></script>
+    <script src="js/xvm/help.js"></script>
+    <script src="js/xvm/permalink.js"></script>   
+    <script src="js/xvm/tools/featureinfo.js"></script>
+    <script src="js/xvm/xeovisormin.js"></script>
+<!------------------------->
+
+	<!-- Legend & Opacity-->
+	
+	<!-- OpacityControl-->
+	<link rel="stylesheet" href="js/xvm/styles/style_opacity_layer.css" type="text/css">
+	<script src="js/xvm/tools/OpacityLayerControl.js" type="text/javascript"></script>
+	<script src="js/xvm/tools/OpacityjQuery.js" type="text/javascript"></script>
+	
+	<!-- LegendControl -->
+	<link rel="stylesheet" href="js/xvm/styles/style_legend_layer.css" type="text/css">
+	<script src="js/xvm/tools/LegendLayerControl.js" type="text/javascript"></script>
+	<script src="js/xvm/tools/LegendJQuery.js" type="text/javascript"></script>
+	<!-- -->
+
+    <script src="js/boxcontainer.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles/cdix_styles.css" type="text/css" media="screen" />
+    
+<!------------------------->
+<!-- Search Tool -->
+
+	<script src="js/form.js" type="text/javascript"></script>
+   	<script src="tools/search_places/searchTool.js"></script>
+   	<script src="tools/search_system/searchSystemTool.js"></script>
+   	<script src="tools/search_catastro/searchCatastroTool.js"></script>
+	<script src="tools/search_coordinates/searchCoordinatesTool.js"></script>
+	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" /> 
+	<link rel="stylesheet" href="styles/table_download.css" type="text/css" media="screen" />   
+	<link rel="stylesheet" href="styles/form.css" type="text/css">
+<!------------------------->
+<!-- splash -->
+<script type="text/javascript" src="tools/splash/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="tools/splash/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="tools/splash/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="tools/splash/splash.js"></script>
+<!---------------------------->
+
+<!-- splash -->
+<script type="text/javascript" src="tools/toc_elle/toc.js"></script>
+<!------------------------->
+<script type="text/javascript" src="tools/download_tool/download.js"></script>
+<!-- Init XVM -->
+<script type="text/javascript" src="js/init_xvm.js"></script>    
+
+  </head>
+  <body onload="xvm_init()">
+    <div id="header">
+      <div id="div_tools"></div>
+      <div id="titulo" ><img src="images/titulo.png" height="50px" border="0" alt=""></div>
+      <div id="tools_recta" style=""><img width=100% height="95" src="images/tools_recta3.png"></div>
+      <div id="tools_curva" style=""><img src="images/tools_curva3.png" width="100%" height="95" border="0" alt=""></div>	
+      <div id="sombra" style=""></div>
+      <div id="cmati" style=""><a href="http://www.cmati.xunta.es" target="_blank"><img  height="54" src="images/cons_med_amb-cor.png"></a></div>
+      <div id="augas" style=""><a href="http://augasdegalicia.xunta.es/" target="_blank"><img src="images/logo_Augas.png" height="56px" border="0" alt=""></a></div>
+      <div id="ideg" style=""><a href="http://sitga.xunta.es/" target="_blank"><img src="images/ideg.png" height="54px" border="0" alt=""></a></div>
+
+ <!--     <div id="iet" style=""><a href="http://www.cmati.xunta.es/portal/cidadan/lang/gl/pid/2450" target="_blank"><img src="images/logoIET_SR.png" width="176" height="50" border="0" alt=""></a></div>
+ -->
+    </div>
+    <div id="content">
+      <div id="map" class="smallmap"></div>
+      <!--div id="legend"></div> 
+      <div id="opacitydiv">
+      	<div id="sliderdiv"></div>
+      </div>-->
+    </div>
+    <div id="footer">
+      <div style="float: left; width: 13%;">
+		<a href="http://www.xunta.es" target="_blank"><img height="33px" src="images/xunta-logo.png"></a>
+      </div>
+      <div style="float: left; width:70%;"><ul style="color:white;font-size:9px;font-family:Verdana,Tahoma;margin-top:5px"><li>&copy; Xunta de Galicia. Información mantida e publicada na internet pola Xunta de Galicia</li><li><a target="_blank" style="text-decoration:none; color:white" href="http://www.xunta.es/oficina-de-rexistro-unico-e-informacion">Oficina de Rexistro Único e Información</a> | <a target="_blank" style="text-decoration:none; color:white" href="http://www.xunta.es/suxestions">Suxestión e queixas</a> | <a target="_blank" style="text-decoration:none; color:white" href="http://www.xunta.es/aviso-legal-do-portal-da-xunta">Aviso legal</a> | <a target="_blank" style="text-decoration:none; color:white" href="http://www.xunta.es/atendemolo">Atendémolo/a</a></li></ul></div>
+	  <div style="position:absolute; padding: 3px; right:15px; width:92px;">
+	    <a href="http://www.turgalicia.es" target="_blank"><img src="images/galicia.png"></a>
+	  </div>
+    </div>
+     
+    <div id="abrecierra" class="abrecierra"><a id="toggler"></a>
+    </div>
+    <div id="boxContainer" class="boxContainer">
+      <div class="aux">
+        <div id="container">
+          <ul class="menu">
+            <!-- <li id="lenda">Lenda</li> -->
+            <li id="capas"  class="active">Capas</li>
+            <li id="capas_visibles" >Visibles (0)</li>
+			<li id="buscador" >Buscar</li>
+          </ul>
+          <span class="clear"></span>
+
+          <div class="content buscador">
+		  <div class="form-all">	
+			<ul class="group_accordion_list">
+				 <li>
+					<a href="#" class="accordion_expanded" title="Busca Territorial">
+							<div class="form-collapse-table" id="collapse_32">
+								<span class="form-collapse-mid" id="collapse-text_32">Busca territorial</span>
+							</div></a>
+					<ul class="form-section2">
+						<form id="issue_seca">
+						
+						  <li class="form-line form-line-column" id="id_2">
+							<label class="labelSpan" id="label_2" for="provincia"> Provincia: </label>
+							<div id="cid_2" class="form-input-wide">
+							  <select class="form-dropdown labelSpan" style="width:140px" id="search-prov-cbox" name="provincia">
+								<option value="Seleccione ..."> Seleccione ... </option>
+
+							  </select>
+							</div>
+						 </li>
+						  <li class="form-line form-line-column" id="id_3">
+							<div id="cid_3" class="form-input-wide">
+							  <div style="text-align:right" class="form-buttons-wrapper">
+								<button id="search-prov-btn" type="button" class="form-submit-button form-submit-button-light labelSpan">
+								  Ir
+								</button>
+							  </div>
+							</div>
+						  </li>	
+						  <li class="form-line form-line-column" id="id_3">
+							<label class="labelSpan" for="search-conc-cbox"> Concello: </label>
+							<div id="cid_3" class="form-input-wide">
+							  <select class="form-dropdown labelSpan" style="width:140px" id="search-conc-cbox" name="concello">
+								<option value="Seleccione ..."> Seleccione ... </option>
+
+							  </select>
+							</div>
+						  </li>
+						  <li class="form-line form-line-column" id="id_3">
+							<div id="cid_3" class="form-input-wide">
+							  <div style="text-align:right" class="form-buttons-wrapper">
+								<button id="search-conc-btn" type="button" class="form-submit-button form-submit-button-light labelSpan">
+								  Ir
+								</button>
+							  </div>
+							</div>
+						  </li>	
+						  <li class="form-line form-line-column" id="id_4">
+							<label class="labelSpan" id="label_4" for="cd_parro"> Parroquia: </label>
+							<div id="cid_4" class="form-input-wide">
+							  <select class="form-dropdown labelSpan" style="width:140px" id="search-parro-cbox" name="cd_parro">
+								<option value="Seleccione ..."> Seleccione ... </option>
+							  </select>
+							</div>
+						  </li>
+						  <li class="form-line form-line-column" id="id_3">
+							<div id="cid_3" class="form-input-wide">
+							  <div style="text-align:right" class="form-buttons-wrapper">
+								<button id="search-parro-btn" type="button" class="form-submit-button form-submit-button-light labelSpan">
+								  Ir
+								</button>
+							  </div>
+							</div>
+						  </li>	
+						  <li class="form-line form-line-column" id="id_5">
+							<label class="labelSpan" id="label_5" for="cd_entidade"> Poboación: </label>
+							<div id="cid_5" class="form-input-wide">
+							  <select class="form-dropdown labelSpan" style="width:140px" id="search-entid-cbox" name="cd_entidade">
+								<option value="Seleccione ..."> Seleccione ... </option>
+							  </select>
+							</div>
+						  </li>
+						  <li class="form-line form-line-column" id="id_3">
+							<div id="cid_3" class="form-input-wide">
+							  <div style="text-align:right" class="form-buttons-wrapper">
+								<button id="search-entid-btn" type="button" class="form-submit-button form-submit-button-light labelSpan">
+								  Ir
+								</button>
+							  </div>
+							</div>
+						  </li>
+						</form>
+					</ul>
+				</li>
+				<li>
+					<a class="expandable" href="#"  title="Busca por Coordenadas">
+						<div class="form-collapse-table" id="collapse_13">
+							<span class="form-collapse-mid" id="collapse-text_13">Coordenadas</span>
+						</div>
+					</a>
+					<ul class="form-section">
+					  <li class="form-line form-line-column" id="id_4">
+						<label class="labelSpan" id="label_4" for="input_4"> X: </label>
+						<div id="cid_4" class="form-input">
+						  <input type="text" class="form-textbox" id="coordx" name="coordx" size="15" maxlength="12" />
+						</div>
+					  </li>
+					  <li class="form-line form-line-column" id="id_5">
+						<label class="labelSpan" id="label_5" for="coordy"> Y: </label>
+						<div id="cid_5" class="form-input">
+						  <input type="text" class="form-textbox" id="coordy" name="coordy" size="15" maxlength="12" />
+						</div>
+					  </li>
+					  <li class="form-line form-line-column" id="id_3">
+						<div id="cid_3" class="form-input-wide">
+						  <div style="text-align:right" class="form-buttons-wrapper">
+							<button id="search-coord-btn" type="button" class="form-submit-button form-submit-button-light labelSpan">
+							  Ir
+							</button>
+						  </div>
+						</div>
+					  </li>
+					</ul>
+				</li>
+	 
+				<li>
+					<a href="#" class="expandable"  title="Busca por Referencia Catastral">
+						<div class="form-collapse-table" id="collapse_13">
+							<span class="form-collapse-mid" id="collapse-text_13">Catastro</span>
+						</div>
+					</a>
+				<!-- https://www1.sedecatastro.gob.es/Cartografia/mapa.aspx?refcat=1181340PH0118S0021JF  fora de galicia 3342904UG8634S -->
+				   <div id="catastro-form">        
+					<ul class="form-section">
+						<li class="form-line form-line-column" id="id_16">
+							<label class="labelSpan" id="label_16" for="input_16"> Refer.: </label>
+							<div id="cid_16" class="form-input">
+								<input type="hidden" class="form-textbox" id="Provincia" name="Provincia" size="20">
+								<input type="hidden" class="form-textbox" id="Municipio" name="Municipio" size="20">
+								<input type="hidden" class="form-textbox" id="SRS" name="SRS" size="20" value="epsg:25829">
+								<input type="text" title="Introduza referencia de 14 dixitos" alt="Introduza referencia de 14 dixitos" class="form-textbox" id="RC-textfield" name="RC" size="14"><!-- Solo 14 digitos (la finca) -->
+							</div>
+						</li>
+					  <li class="form-line form-line-column" id="id_3">
+						<div id="cid_3" class="form-input-wide">
+						  <div style="text-align:right" class="form-buttons-wrapper">
+							<button id="catastro-btn" class="form-submit-button form-submit-button-light labelSpan">
+							  Ir
+							</button>
+						  </div>
+						</div>
+					  </li>
+					</ul>
+				   </div>
+
+				</li>
+<!-- DHGC, Busqueda por sistema de Explotacion -->
+                    <li>
+                    <a href="#" class="expandable"  title="Busca por Sistema de Explotación">
+                        <div class="form-collapse-table" id="collapse_27">
+                            <span class="form-collapse-mid" id="collapse-text_27">Sistema de Explotación</span>
+                        </div>
+                    </a>
+                    <ul class="form-section">
+
+                
+                      <li class="form-line form-line-column" id="id_36">
+                        <label class="labelSpan" id="label_36" for="input_36"> S. Explotación:&nbsp;&nbsp; </label>
+                        <div id="cid_36" class="form-input">
+                          <select class="form-dropdown labelSpan" style="width:120px" id="search-sistema-cbox" name="search-sistema-cbox">
+                            <option value="Seleccione ..."> Seleccione ... </option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="form-line form-line-column" id="id_3">
+                        <div id="cid_3" class="form-input-wide">
+                          <div style="text-align:right" class="form-buttons-wrapper">
+                            <button id="search-sistema-btn" type="button" class="form-submit-button form-submit-button-light">
+                              Ir
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                </li>
+		</ul>
+		</div>	
+	</div>
+
+<!-- CAPAS CONTENIDO -->
+      <div class="content capas">
+          <div class="form-all">    
+            <ul class="capa-section1">
+                 <li>
+                    <a href="#" class="accordion_expanded" title="Busca Territorial">
+                            <div class="form-collapse-table" id="collapse_32">
+                                <span class="form-collapse-mid" id="collapse-text_32">Cargando capas...</span>
+                            </div></a>
+                    <ul class="form-section2 layer_group1" style="margin-left: 10px;">
+                          <li><img src="images/bullet.png" alt="-" /> Cargando capas...</li> 
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+      </div>
+	<!-- FIN CAPAS CONTENIDO -->
+	<!-- CAPAS SELECCIONADO -->
+      <div class="content capas_visibles">
+          <div class="form-all">    
+            <ul class="capas_visibles-section1">
+                 <!--li>
+                    <a href="#" class="accordion_expanded" title="Capas seleccionadas">
+                            <div class="form-collapse-table" id="collapse_32">
+                                <span class="form-collapse-mid" id="collapse-text_32">Cargando capas...</span>
+                            </div></a>
+                    <ul class="form-section2 layer_group1" style="margin-left: 10px;">
+                          <li><img src="images/bullet.png" alt="-" /> Cargando capas...</li> 
+                    </ul>
+                </li-->
+            </ul>
+        </div>  
+      </div>
+	<!-- FIN CAPAS SELECCIONADO-->
+
+	</div>
+  </div>
+</div>
+<!--------- Init ToC with all layers --->
+
+<div id="dialogo" title="Panel de descargas" style="display: none;">
+		<!-- INICIO TABLA DEL PANEL DE DESCARGAS-->
+		<p><b>Importante: </b>A cesión das capas de información xeográfica é exclusivamente para usos non comerciais, 
+			a súa concesión leva implícito o compromiso de citar sobre a súa procedencia. Está prohibida expresamente a súa reprodución comercial ou venda</p>
+		<br>
+		<table cellpadding="0" cellspacing="0" border="0" class="display" id="lista_descargas">
+			<!-- LA TABLA SE RELLENA EN download.js-->
+		</table>
+</div>
+
+</body>
+</html>

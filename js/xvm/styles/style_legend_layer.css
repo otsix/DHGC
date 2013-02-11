@@ -1,0 +1,40 @@
+/*
+ * This is Legend Div style. To do change into div
+ * is necessary add here CSS properties
+ * #legend: div id
+ */
+#legend {
+	background-color:black;
+	top: 60px;
+	left: 400px;
+}
+
+#olLegendLayersTable {
+	/*background-color: black;*/ 
+}
+
+.olControlPanel .olControlLegendLayerControlItemInactive {
+	display: block;
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+	line-height: 19px;
+	background: black;
+	margin: 1px;
+	padding: 0;
+	cursor: pointer;
+	background-image: url("../images/legend.png");
+}
+
+.olControlPanel .olControlLegendLayerControlItemActive {
+	display: block;
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+	line-height: 19px;
+	background: black;
+	margin: 1px;
+	padding: 0;
+	cursor: pointer;
+	background-image: url("../images/legend.png");
+}

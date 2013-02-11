@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+	<title>Visor de cartografia IET</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <link rel="stylesheet" href='/estilos/estilos.css' type="text/css">
+  	<style>
+	 td{
+	 color:#666;
+	 font-family:tahoma, Arial, Helvetica, sans-serif;
+	 font-size:12px;
+	 }
+	
+	 td{
+	 color:#666;
+	 font-family:tahoma, Arial, Helvetica, sans-serif;
+	 font-size:12px;
+	 }
+
+	</style>
+<script>
+
+function ocultar_ayuda(){
+	window.close()
+}
+
+function esExplorer(){
+  nav="Microsoft Internet Explorer"
+	var sBuf = "";
+	sBuf = window.self.navigator.appName;
+	if( sBuf == nav || (sBuf.indexOf(nav)!=-1)) return 1;
+	return 0;
+}
+
+</script>
+
+</head>
+<body>
+ <a name='arriba'></a>
+
+<center>
+
+		<div id="divAyuda">
+			<br>
+			<br>
+
+		  <div id="divParrafo" class='parrafo' >
+			<br>
+				<table border='0' cellpadding='0' cellspacing='0' width=90% >
+				 <tr>
+					 <td  align=center  width=90% >
+					  <div><strong>AXUDA</strong></div>
+					 </td>
+					 <td align=right width='10%'>
+
+			 			<a href='javascript:window.print();'><img class='botonHerramientas' src='images/herramientas_print.gif'  alt='Imprimir' title="Imprimir"  border='0'/></a>&nbsp;
+		 				<a href='javascript:ocultar_ayuda()'><img src='images/herramientas_salir.gif' alt='Salir' title="Salir" border='0'></a>
+
+					</td>
+
+				</tr>
+				</table>
+
+
+				<br>
+
+				 <table width="40%" border='0' cellpadding='5' cellspacing='2' >
+				 <tr>
+					 <td width=32% align=center class='botonVerdeClaro'><strong><a href='#link1'>Ferramentas</a></strong></td>
+
+					 <td width=23% align=center class=botonVerdeClaro><strong><a href='#link2'>Lenda</a></strong></td>
+
+	 				 <td width=17% align=center class=bordeverde><strong><span class="botonVerdeClaro"><a href='#link3'>Busca</a></span></strong></td>
+
+					 <td width=28% align=center class=bordeverde>
+					   <strong><a href='#link4'>Mapa gu&iacute;a</a>
+				     </strong></td>
+
+
+				   </tr>
+
+					 </table>
+		  </div>
+
+			<a name='link1'></a>
+			<br>
+			<br>
+
+			
+
+		  <div id="divParrafo" class='parrafo' style="clear:both">
+		    <table width="100%" border="0">
+		      <tr>
+		        <td align="center"><strong>Ferramentas</strong></td>
+	          </tr>
+	        </table>
+
+				  <div id='imagen1' style='float:left;padding-right:15px;margin-right:10px;' >
+				    <table width="378" border="0">
+				      <tr>
+				        <td colspan="14"><div align="center"><img src="images/tools.png" alt=""></div></td>
+			          </tr>
+				      <tr>
+				        <td width="28"><div align="center">1</div></td>
+				        <td width="25"><div align="center">2</div></td>
+				        <td width="25"><div align="center">3</div></td>
+				        <td width="25"><div align="center">4</div></td>
+				        <td width="24"><div align="center">5</div></td>
+				        <td width="24"><div align="center">6</div></td>
+				        <td width="24"><div align="center">7</div></td>
+				        <td width="24"><div align="center">8</div></td>
+				        <td width="24"><div align="center">9</div></td>
+				        <td width="24"><div align="center">10</div></td>
+				        <td width="24"><div align="center">11</div></td>
+				        <td width="24"><div align="center">12</div></td>
+				        <td width="24"><div align="center">13</div></td>
+				        <td width="25"><div align="center">14</div></td>
+			          </tr>
+			        </table>
+		    </div>
+
+			  <div id='divTexto'>
+
+						<p align='justify' >&nbsp;</p>
+						<p align='justify' >&nbsp;</p>
+			  </div>
+		  </div>
+		  <div id="divParrafo" class='parrafo'  >
+
+				 <div id='divTexto' style="width=90%">
+				 <table border=0 cellpadding=4 cellspacing=4 width=100%>
+
+				<tr>
+				 <td width=5% valign=middle align=center>1</td>
+				 <td>
+						<p align="justify">
+							 Informaci&oacute;n: Permite, ao facer click, velos datos do elemento seleccionado da capa activa.
+						</p>
+				 </td></tr>
+
+				<tr>
+				  <td valign=middle align=center>2</td>
+				  <td>Descargar Capas: Esta ferramenta permite descargar as capas de cartograf&iacute;a</td>
+				  </tr>
+				<tr>
+				 <td width=5% valign=middle align=center>3</td>
+				 <td>
+						<p align="justify">
+							 Mover mapa: Permite desprazarnos polo mapa, si pinchamos e arrastramos, adem&aacute;is permite velos datos do elemento seleccionado de la capa activa cuando hacemos click.
+						</p>
+				 </td></tr>
+
+					<tr>
+					  <td valign=middle align=center >4</td>
+					  <td >Zoom m&aacute;is: Ferramenta que nos permite achegarnos &aacute; cartograf&iacute;a visualizada</td>
+				   </tr>
+					<tr>
+					  <td valign=middle align=center >5</td>
+					  <td >Zoom menos: Permite alonxarnos e facer zoom hacia afora</td>
+				   </tr>
+					<tr>
+					  <td width=5% valign=middle align=center >6</td>
+					<td >
+
+						<p align="justify">
+							 Zoom de caixa: Permite facer zoom na zona que determinemos ao pinchar e arrastrar. A mesma funcionalidade pódese realizar,sen seleccionar esta ferramenta, pulsando a tecla "shift" e sen soltala pinchar e arrastrar o cursor no mapa.
+							Este atallo podese utilizar independentemente da ferramenta que est&eacute; activa.
+						</p>
+					</td></tr>
+
+					<tr>
+					  <td width=5% valign=middle align=center>7</td>
+					<td>
+						<p align="justify">Zoom Seguinte: Perm&iacute;tenos ir a unha visualizaci&oacute;n xa realizada anteriormente. Esta ferramenta activarase cando navegemos polo mapa e utilicemos a ferramenta de zoom previo</p>
+					</td></tr>
+
+			       <tr>
+				      <td valign=middle align=center>8</td>
+				      <td>Zoom Previo: Perm&iacute;tenos ir &aacute; visualizaci&oacute;n anterior. Act&iacute;vase cando se navega polo mapa</td>
+			       </tr>
+			       <tr>
+			         <td width=5% valign=middle align=center>9</td>
+				 <td>
+					  <p align="justify">
+							 Permite restaurar o mapa a os valores iniciais de zoom, conservando as capas engadidas, etc.
+				   </p>
+				 </td></tr>
+
+				<tr>
+				 <td width=5% valign=middle align=center>10</td>
+				 <td>
+						<p align="justify">
+							 Medir distancias: Mide distancias no mapa. Para finalizar a medici&oacute;n, faga doble click.
+							 O resultado da medici&oacute;n amósarase na liña de información.
+						</p>
+				 </td></tr>
+				<tr>
+				  <td width=5% valign=middle align=center>11</td>
+				 <td>
+						<p align="justify">
+							 Medir &aacute;reas: Calcula a área de un polígono debuxado no mapa. Para finalizar a medici&oacute;n, faga doble click. O resultado da medici&oacute;n amosarase na liña de información.
+						</p>
+				</td></tr>
+
+				<tr>
+				  <td valign=middle align=center>12</td>
+				  <td>Borra os elementos buscados, que estan seleccionados en cor vermella
+				  <tr>
+				    <td valign=middle align=center>13</td>
+				    <td>Permalink: Amosa o hiperv&iacute;nculo da vista actual. O obxectivo desta ferramenta e poder copiar o hiperv&iacute;nculo e enviarllo a outro usuario para que visualice o mesmo
+			       <tr>
+			         <td valign=middle align=center>14</td>
+			         <td> Amosa a Axuda</td>
+		           </tr>
+
+					<tr align="center" valign="middle">
+				 <td colspan='2'><br>
+				   </td></tr>
+
+
+			</table>
+
+   </div>
+
+ </div>
+		  <table width="100%" border="0">
+		    <tr>
+		      <td align="center">&nbsp;<a name='link2'></a>
+			<br>
+			<br>
+
+			<div class='tituloAyuda'>
+
+			 <div style='float:right'><a href='#arriba' target="_self"><img src='images/flecha_arriba.png' border='0' title='Ir a menu'></a></div>
+			 <div class='TITULO14N' ><strong>Lenda</strong></div>
+			</div>
+
+		  <div id="divParrafo" class='parrafo' >
+
+				  <div id='imagen1' style='float:left;padding-right:15px;margin-right:10px;' >
+				  <img src='images/lenda.png'>
+				 </div>
+
+			  <div id='divTexto'>
+
+						<p align="justify">
+		        Pres&eacute;ntase unha lista coas capas do mapa.</p>
+						<p align="justify"> As capas base, son as que se amosan como cartograf&iacute;a de referencia, como ortofotos, imaxes de sat&eacute;lite e cartograf&iacute;a base.<br>
+						As capas tem&aacute;ticas son as capas sobre as que trata a tem&aacute;tica do visualizador<br>
+</p>
+				<p align="justify"> <strong>Cada capa de la leyenda consta de:</strong></p>
+				<p align="justify">				Controis <img src="images/radio_activo.gif" width=12 height=12 valign=top> / <img src="images/radio_gris.gif" width=12 height=12 valign=top>
+				utilízanse para seleccionar a capa activa.</p>
+<p align="justify">Marca de visibilidad da capa <img src="images/seleccion.png" width=12 height=12>&nbsp;/ <img src="images/cuadrado.gif" width=12 height=12> , que se pode modificar facendo click sobre a icona.</p>
+						<p align="justify"> <img src="images/prop_lenda.png" width="19" height="24" alt="Propiedades"> Con esta ferramenta am&oacute;sanse as propiedades de visualizaci&oacute;n da capa e a simbolox&iacute;a gr&aacute;fica que a representa. Aparece unha barra de transparencia para facer m&aacute;is transparente ou opaca a capa seleccionada</p>
+						<p align="justify">Gr&aacute;fico que indica o estilo de representaci&oacute;n da capa no mapa, por exemplo: 
+			 Si se trata dunha capa tipo RASTER, amosarase <img src="images/raster.gif" width=20 height=15> e si é unha capa lineal amosarase <img src="images/linea.png" width=18 height=17>. </p>
+						<p align="justify">Este panel poderase amosar ou agochar premendo en <img src="images/encojer.png" width="15" height="17" alt="encoller"> ou <img src="images/despregar.png" width="14" height="32" alt="despregar"></p>
+						<p align="justify"></p>
+			  </div>
+
+		  </div>
+          
+          </td>
+	        </tr>
+		    <tr>
+		      <td align="center">
+              		  <p><a name='link3'></a>
+		  
+	      </p>
+			<div class='tituloAyuda'>
+
+			 <div style='float:right'><a href='#arriba' target="_self"><img src='images/flecha_arriba.png' border='0' title='Ir a menu'></a></div>
+			 <div class='TITULO14N' ><strong>Busca</strong></div>
+			</div>          
+
+
+
+
+
+		  <div id="divParrafo2" class='parrafo' >
+		    <div id='imagen2' style='float:left;padding-right:15px;margin-right:10px;' ><img src="images/busca.png" width="293" height="313" alt="buscar"></div>
+		    <div id='divTexto2'>
+		      <p align="justify"> Realizar unha busca:</p>
+		      <p align="justify"> Podremos realizar diferentes tipos de busca</p>
+		      <p align="justify">Territorial: por provincia, concello, parroquia ou entidade de poboaci&oacute;n.</p>
+		      <p align="justify">Busca por coordenadas introducindo as coordenadas UTM que desexe localizar (sempre e cando est&eacute;n localizadas no rango comprendido pola xeograf&iacute;a galega.</p>
+		      <p align="justify">Localizaci&oacute;n por referencia catastral; a referencia debe ter 14 d&iacute;xitos xa que localiza unha parcela, localizar&aacute; cunha simbolox&iacute;a puntual.</p>
+		      <p align="justify"> Localizar sistema de explotaci&oacute;n: localiza o sistema de explotaci&oacute;n seleccionado.</p>
+		      <p align="justify">A ferramenta localizar&aacute; a entidade debuxando a &aacute;rea ou punto que comprende en cor vermello <img src="images/localizacion.png" width="21" height="20">. Esta localizaci&oacute;n poderase eliminar do mapa coa ferramenta <img src="images/delete.png" width="24" height="25"></p>
+		      <p align="justify">Este panel poderase amosar ou agochar premendo en <img src="images/encojer.png" width="15" height="17" alt="encoller"> ou <img src="images/despregar.png" width="14" height="32" alt="despregar"><br>
+	          </p>
+            </div>
+	      </div>
+              
+              
+              </td>
+	        </tr>
+		    <tr>
+		      <td align="center">
+           		  <p><a name='link4'></a>
+		    <br>
+		    <br>
+	      </p>
+		  <div class='tituloAyuda'>
+
+		    <div style='float:right'><strong><a href='#arriba' target="_self"><img src='images/flecha_arriba.png' border='0' title='Ir a menu'></a></strong></div>
+			 <div class='TITULO14N' ><strong>Mapa Gu&iacute;a</strong></div>
+			</div>
+
+ 		  <div id="divParrafo" class='parrafo' >
+ 		  	<div id='imagen12' style='float:left;padding-right:15px;margin-right:10px;' ><img src="images/mapaguia.png" alt="mapa gu&iacute;a"></div>
+ 		    <div id='divTexto'  >
+ 		      <p align="left"> O mapa gu&iacute;a permite o desprazamento do mapa, dependendo do Navegador que estemos utilizando podemos
+			    realizar as seguentes funcións.</p>
+			  <p align="left">Podemos amosalo ou agochalo premendo na icona <img src="images/minimize.png" width="19" height="22" alt="minimizar"> ou <img src="images/maximize.png" width="22" height="21" alt="maximizar"></p>
+
+				 <p align="justify" >
+					 En <b>Firefox</b>: Podemos movernos polo mapa  arrastrando o rect&aacute;ngulo vermello, (ou o punto de mira <img src='images/punto_mira.gif'> si o nivel de zoom é alto) á zona á que desexamos desprazarnos.
+					 Tam&eacute;n podemos desprazarnos a un sitio simplemente pinchando no punto aol que queremos desprazarnos.<br>
+					 <br>
+			  </p>
+				<p align="justify" >
+					 <b>En Internet Explorer</b>:  Solo funciona o segundo método, pinchamos co rato no punto ao que desexamos desprazarnos e o mapa moverase  a esta ubicación.
+			  </p>
+
+		    </div>
+
+		   </div>   
+              </td>
+	        </tr>
+	      </table>
+
+            
+
+
+
+
+
+
+
+</div>
+
+</center>
+<br>
+</body>
+<script>
+
+if (!esExplorer()){
+ document.getElementById("divAyuda").style.height="7850"
+}else{
+ document.getElementById("divAyuda").style.width="95%"
+}
+
+</script>
+</html>

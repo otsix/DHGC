@@ -1,0 +1,204 @@
+@CHARSET "UTF-8";
+/*
+*/
+
+/******* GENERAL RESET *******/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+    border:0pt none;
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-style:inherit;
+    font-weight:inherit;
+    margin:0pt;
+    padding:0pt;
+    vertical-align:baseline;
+}
+body{
+    line-height: 1em;
+    font-size: 14px;
+    background: #262626 url(../images/bg.png) repeat scroll 0 0;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    margin: 0pt;
+    cursor: default;
+    color: #fff;
+}
+
+/*To prevent img selections*/
+img{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+ul{
+    list-style: none;
+    list-style-type: none;
+    list-style-position: outside;
+}
+a{
+    cursor: pointer;
+    color: #ece6bd;
+    text-decoration: underline;
+    outline: none !Important;
+}
+html,body{
+    height:100%;
+}
+.clear{
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    line-height: 0;
+}
+
+
+/******* /GENERAL RESET *******/
+
+/******* GENERAL *******/
+h1{
+    color: #fff;
+    font-size: 26px;
+    line-height: 3em;
+}
+h2{
+    line-height: 2em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #e4e1cd;
+}
+.wrapper{
+    width: 0px;
+    padding-top: 10px;
+}
+/*
+.boxContainer{
+    width: 0px;
+    padding-top: 0px;
+}
+*/
+/******* /GENERAL *******/
+
+/******* MENU *******/
+#container{
+    margin:0em auto;
+    width:281px;
+    /*To prevent selections*/
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#container ul{
+    list-style:none;
+    list-style-position:outside;
+}
+#container ul.menu li{
+    float:left;
+    margin-right:1px;
+    margin-bottom:-1px;
+}
+#container ul.menu li{
+	font-size: 11px;
+    font-weight:600;
+    display:block;
+    padding:2px 5px;
+    background:#AAC0CF;
+    margin-bottom:-1px;
+    border:1px solid #666;
+    border-width:1px 1px 1px 1px;
+    position:relative;
+    color:#e4e1cd;
+    cursor:pointer;
+    border-radius:3px 3px 0 0;
+    -moz-border-radius:3px 3px 0 0;
+    -webkit-border-radius:3px 3px 0 0;
+}
+#container ul.menu li:hover{
+    color:#fff;
+}
+#container ul.menu li.active{
+    background:#7DB1D3;
+    top:1px;
+    border-bottom:0;
+    color:#234E6B;
+}
+/******* /MENU *******/
+
+/******* CONTENT *******/
+.content{
+    margin:0pt auto;
+    background:#7DB1D3;
+    border:1px solid #666;
+    text-align:left;
+    padding:0.3em;
+    padding-bottom:20px;
+    font-size:11px;
+    line-height:14px;
+    color:#666;
+    border-radius:0 5px 5px 5px;
+    -moz-border-radius:0 5px 5px 5px;
+    -webkit-border-radius:0 5px 5px 5px;
+}
+.content_busca{
+    margin:0pt auto;
+    background:#7DB1D3;
+    border:1px solid #666;
+    text-align:left;
+    padding:0.3em;
+    padding-bottom:20px;
+    font-size:12px;
+    line-height:2em;
+    color:#666;
+    border-radius:0 5px 5px 5px;
+    -moz-border-radius:0 5px 5px 5px;
+    -webkit-border-radius:0 5px 5px 5px;
+}
+
+.content h3{
+    line-height:1em;
+    vertical-align:middle;
+    height:24px;
+    padding:5px 5px 5px 20px;
+    font-size:32px;
+    color:#E4E1CD;
+}
+/******* /CONTENT *******/
+.capas_visibles-section1 {
+margin-left: 5px;
+padding:5px;
+}
+
+/******* SELECCION *******/
+.content.capas_visibles{
+    display:none;
+}
+
+/******* NOTICIAS *******/
+.content.lenda{
+    display:none;
+}
+/******* /NOTICIAS *******/
+
+/******* TUTORIALES *******/
+.content.buscador{
+    display:none;
+}
+/******* /TUTORIALES *******/
+
+/******* ENLACES *******/
+.content.capas{
+    display:block;
+}
+
+/*
+.content.capas a{
+    color:#498BBF;
+}*/
+/******* /ENLACES *******/

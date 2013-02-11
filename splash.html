@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Splash </title>
+
+  <meta name="Author" contido="">
+  <meta name="Keywords" contido="">
+  <meta name="Description" contido="">
+    <script src="lib/jquery/jquery-1.6.4.min.js" type="text/javascript"></script>
+
+    <script src="lib/jquery/jquery-ui.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="tools/splash/styles/splash.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="styles/cdix_styles.css" type="text/css" media="screen" />
+ <!--	<link rel="stylesheet" href="styles/form.css" type="text/css">
+-->
+
+	<script src="js/form.js" type="text/javascript"></script>
+<script type="text/javascript">
+	<!--
+$(document).ready(function(){
+ if ($.browser.msie){
+ 
+ 	 	 $("#navegador").css("display","block");
+         $(".mi_menu li.active").removeClass("active");
+        $(".mi_menu #navegador").addClass("active");  	
+    	$(".contido").css("display", "none");
+    	$(".navegador").fadeIn();
+    	
+     $(".mi_menu > li").click(function(e){
+        var a = e.target.id;
+        //desactivamos seccion y activamos elemento de menu
+        $(".mi_menu li.active").removeClass("active");
+        $(".mi_menu #"+a).addClass("active");
+        //ocultamos divisiones, mostramos la seleccionada
+       $(".contido").css("display", "none");
+       //$("."+a).fadeIn();
+       $("."+a).css("display", "block");
+    });   	
+    	
+    }
+  else { 
+ 
+    $(".mi_menu > li").click(function(e){
+        var a = e.target.id;
+        //desactivamos seccion y activamos elemento de menu
+        $(".mi_menu li.active").removeClass("active");
+        $(".mi_menu #"+a).addClass("active");
+        //ocultamos divisiones, mostramos la seleccionada
+       $(".contido").css("display", "none");
+       //$("."+a).fadeIn();
+       $("."+a).css("display", "block");
+    });
+   } 
+});
+
+	//-->
+	</script>
+
+
+ </head>
+
+ <body bgcolor="#000000">
+
+  <div class="aux">
+	<div id="contenedor">
+	  <ul class="mi_menu">
+		<li id="presentacion" class="active">Presentación</li>
+		<li id="saudo">Saúdo do Conselleiro</li>
+		<li id="instrucions">Manual de uso</li>
+		<li id="contacto">Contacto</li>
+		<li id="navegador" style="display:none;">Aviso</li>		
+	  </ul>
+	  <span class="miclear"></span>
+	  <div class="contido presentacion">
+		<ul>
+        <h1>
+        	Benvidos a este 
+        	"Acceso Xeográfico á Información" da Xunta de Galicia.
+		</h1>
+		<p>Dende esta plataforma poderá descargar as follas a escala 1:5000
+			cun simple click  das series cartográficas xeradas no "Instituto de Estudos do Territorio" 
+			de forma libre e en formatos abertos. 
+		</p>		
+		<p>	
+			Nesta primeira fase ponse a disposición da cidadanía
+			varias series e abarcan a totalidade
+			do territorio galego en formato PDF.
+			
+			De forma progresiva incorporárase o máximo de información do interese xeral vencellada ao territorio 
+			e accesible de forma intuitiva e xeográfica.  
+		</p>
+		<p>
+			Para consultar máis información, servizos de mapas e demáis prema 
+			<a href="http://sitga.xunta.es/"
+			 target="_blank">aquí</a>
+		</p>
+
+		<p style="margin-top: 2em;">
+				<table style="width: 100%" >
+					<tr>
+					<td><img src="images/logoIET_SR.png" /></td>
+					<td><img height="54" src="images/cons_med_amb-cor-neg.png"></td>
+					</tr>
+				</table>
+		</p>
+	  </ul>
+	  </div>
+	  
+	  <span class="miclear"></span>
+	  <div class="contido saudo">
+		<ul>
+       <div style="float:left; margin-right: 8px; margin-top: 5px; margin-bottom: 10px;"><img src="images/conselleiro.jpg" width="180" alt="Conselleiro" /></div>	
+        	Como conselleiro de Medio Ambiente, Territorio e Infraestruturas doulle a benvida a este espazo web 
+        	que pretende contribuir á difusión de información de grande interese para a ordenación territorial 
+        	e paisaxística, o desenvolvemento económico, social e protección dos nosos valores naturais.
+		<p>A Xunta, consciente da natureza estratéxica que posúe a información xeográfica está
+			a dar un paso máis para crear os medios necesarios para localizar,
+			avaliar e pór a disposición da cidadanía a totalidade dos datos territoriais
+			dispoñibles nos diferentes niveis da nosa administración.
+			Sirva esta plataforma para seguir na liña de transparencia e 
+			libre acceso á información do territorio galego a través das novas tecnoloxías.
+		</p>
+		<p><b>Agustín Hernández Fernández de Rojas</b><br/>
+			Conselleiro de Medio Ambiente, Territorio e Infraestruturas
+		</p>
+	  </ul>
+	  </div>
+	  
+	  <div class="contido instrucions">
+	<!-- <h2>Instrucións</h2> -->
+		<ul>
+		  <li><b>Como facer unha descarga:</b></li>
+		  <li>Debe estar activada a ferramenta de descargas (icona <img src="js/xvm/images/download.png" width="16" border="0" alt=""> na barra de ferramentas)</li>
+		  <li><img src="images/bullet.png" alt="-" />Facer click no mapa seleccionando a malla 5000</li>
+		  <li><img src="images/bullet.png" alt="-" />Abrirase unha ventá coas series cartográficas contidas no ámbito da folla 5000 selecionada</li>
+		  <li><img src="images/bullet.png" alt="-" />Click na serie seleccionada</li>
+		</ul>
+		<ul>
+		  <li><b>Para facer unha busca:</b></li>
+		  <li>No panel esquerdo seleccionar o método de busca</li>
+		  <li><img src="images/bullet.png" alt="-" /><b>Busca territorial</b>: Seleccione o territorio polo que desexa buscar e faga clic no botón</li>		
+		  <li><img src="images/bullet.png" alt="-" /><b>Busca por Coordenadas</b>: Escriba as coordenadas proxectadas correspondentes ao punto que desexe buscar e faga clic no botón</li>
+		  <li><img src="images/bullet.png" alt="-" /><b>Busca por Referencia Catastral</b>: Escriba o código de 14 caracteres para buscar a finca desexada e faga clic no botón</li>
+		  <li><img src="images/bullet.png" alt="-" /><b>Busca por folla</b>: Seleccione a folla polo que desexa buscar e faga clic no botón</li>		  
+		</ul>
+<p></p>
+
+	</div>
+	  <div class="contido contacto">
+	<!--	<h2>Contacto</h2> -->
+		<ul>
+			<div style="padding:2px;">
+				<a href="http://sitga.xunta.es/" target="_blank">
+					<center><img src="images/contacta.jpg"></center>
+				</a>
+			</div>
+		</ul>
+	  </div>
+		<div class="contido navegador">
+			<ul>
+				<h1> Benvidos a este
+				"Acceso Xeográfico á Información" da Xunta de Galicia. </h1>
+				<p>
+					<font color="#ff0000"><b>O seu navegador non cumpre os estándares W3C</b></font> 
+				</p>
+				<p>
+					Para poder visualizar esta páxina web correctamente,
+					recomendámoslle empregar algún dos seguintes navegadores libres e gratuítos:
+					<br/>
+					<a href="https://www.google.com/chrome/index.html?hl=es" target="_blank">Google Chrome</a>
+					&nbsp;&nbsp; <a href="http://www.mozilla.org/es-ES/firefox/new/" target="_blank">Firefox</a>
+					&nbsp;&nbsp; <a href="http://www.apple.com/es/safari/download/" target="_blank">Safari</a>
+				</p>
+				<p>
+				</p>
+			
+				<p style="margin-top: 2em;">
+					<table style="width: 100%" >
+						<tr>
+						<td><img src="images/logoIET_SR.png" /></td>
+						<td><img height="54" src="images/cons_med_amb-cor-neg.png"></td>
+						</tr>
+					</table>
+				</p>			
+				<p>
+				</p>
+			</ul>
+		</div>	  
+	  
+	</div>
+  </div>
+
+ </body>
+</html>

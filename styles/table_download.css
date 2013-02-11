@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+/*
+*/
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.display {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+}
+
+table.display thead th {
+	padding: 3px 10px;
+	border-bottom: 1px solid black;
+	font-weight: bold;
+	cursor: pointer;
+	* cursor: hand;
+}
+
+table.display tfoot th {
+	padding: 3px 10px;
+	border-top: 1px solid black;
+	font-weight: bold;
+}
+
+table.display tr.heading2 td {
+	border-bottom: 1px solid #aaa;
+}
+
+table.display td {
+	padding: 3px 10px;
+}
+
+table.display td.center {
+	text-align: center;
+}
